@@ -104,6 +104,12 @@
 
 Skills 决定方法论。需要时先读对应 `SKILL.md`。本地特有信息写在 `TOOLS.md`。
 
+### OpenClaw 服务
+
+- `openclaw gateway` 的 launchd 服务应绑定稳定 Node 路径，优先 `/opt/homebrew/opt/node/bin/node`
+- 避免把服务安装到 `~/.nvm/...`、`~/.fnm/...` 这类版本管理器路径上，否则 Node 升级或清理后容易失效
+- 重装服务时，显式用稳定 Node 执行当前安装的 OpenClaw CLI，再运行 `openclaw doctor --deep` 复查
+
 **🎭 语音讲述：** 若有 `sag`（ElevenLabs TTS），在讲故事/影评场景优先语音。
 
 **📝 平台格式规范：**
